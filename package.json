@@ -1,0 +1,39 @@
+{
+  "name": "bb-plugin-status-strip",
+  "version": "0.1.0",
+  "description": "Weekly usage limit and prompt-cache countdown in bb's composer bar, plus a sidebar list of warm prompt caches.",
+  "keywords": [
+    "bb-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyrax111/bb-plugin-status-strip.git"
+  },
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "bb plugin build"
+  },
+  "engines": {
+    "bb": ">=0.49",
+    "bbPluginSdk": ">=0.6.132"
+  },
+  "bb": {
+    "name": "Status Strip",
+    "description": "Shows your weekly usage limit and prompt-cache countdown in the composer bar, e.g. 7d 12% (1d15h) │ cache 59m, and lists threads with a warm prompt cache in the sidebar footer.",
+    "branding": {
+      "icon": "Gauge"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.132",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "hono": "^4.13.19",
+    "typescript": "^5.7.0"
+  }
+}
